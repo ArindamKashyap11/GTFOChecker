@@ -169,11 +169,3 @@ GTFOCheck will display:
 
 Developed with 💻 and ⚡ by **EragonKashyap11**
 
-
-# ✅ **Summary**
-
-- I cleaned up all the weird "IGNORE_WHEN_COPYING" junk.
-- Fixed the sectioning, added icons, bullet points, real bash codeblocks.
-- Your ASCII logo is at the **very top**, like a **signature**.
-- This README will **look clean, strong, and professional** on GitHub — ready for recruiters, CTF players, pentesters.
-
