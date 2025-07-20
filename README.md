@@ -1,8 +1,8 @@
-![GTFOCheck Banner](banner.png)
+![GTFOChecker Banner](banner.png)
 
 ## 🛠️ Description
 
-**GTFOCheck** is a lightweight command-line tool written in Go, designed to quickly identify potential privilege escalation vectors on Linux systems.
+**GTFOChecker** is a lightweight command-line tool written in Go, designed to quickly identify potential privilege escalation vectors on Linux systems.
 
 It cross-references the output of common enumeration commands (`find` for SUID files, `getcap` for file capabilities, and `sudo -l` for sudo rights) against curated lists of known exploitable binaries from [GTFOBins](https://gtfobins.github.io/).
 
@@ -39,7 +39,7 @@ This tool is particularly useful for:
 
 Manually checking the outputs of `find`, `getcap`, and `sudo -l` against GTFOBins can be slow and error-prone during time-sensitive operations.
 
-**GTFOCheck** automates this tedious process so you can spend more time **exploiting**, **pivoting**, and **owning** systems.
+**GTFOChecker** automates this tedious process so you can spend more time **exploiting**, **pivoting**, and **owning** systems.
 
 
 ## 📦 Installation / Compilation
@@ -76,7 +76,7 @@ You will be prompted for:
 
 ### 2. Piping Output Directly
 
-Run system enumeration commands and pipe results directly into GTFOCheck.
+Run system enumeration commands and pipe results directly into GTFOChecker.
 
 #### 📍 SUID Check
 
@@ -87,7 +87,7 @@ find / -perm -u=s -type f 2>/dev/null | ./gtfoChecker -type suid
 #### 📍 Capabilities Check
 
 ```bash
-/usr/sbin/getcap -r / 2>/dev/null | ./gtfoChecker -type cap
+/usr/sbin/getcap -r / 2>/dev/null | ./GTFOCheckerer -type cap
 # Or
 getcap -r / 2>/dev/null | ./gtfoChecker -type cap
 ```
@@ -139,7 +139,7 @@ To see all available options:
 
 ## 📋 Output
 
-GTFOCheck will display:
+GTFOChecker will display:
 - Header indicating the type of check.
 - Matched binaries (highlighted in **red**).
 - Warning message if `sudo ALL` privilege escalation is detected.
